@@ -22,6 +22,8 @@ import asyncio
 from ws_ping import ConnectionManager
 import time
 
+sys.excepthook = sys.__excepthook__
+
 # Try to import mediapipe, but continue if not available
 try:
     import mediapipe as mp
