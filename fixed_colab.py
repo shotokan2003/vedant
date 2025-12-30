@@ -21,8 +21,10 @@ import uvicorn
 import asyncio
 from ws_ping import ConnectionManager
 import time
+import faulthandler
+faulthandler.enable()
 
-sys.excepthook = sys.__excepthook__
+# sys.excepthook = sys.__excepthook__
 
 # Try to import mediapipe, but continue if not available
 try:
